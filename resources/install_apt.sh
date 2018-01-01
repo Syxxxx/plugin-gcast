@@ -8,11 +8,13 @@ echo "********************************************************"
 echo "*             Installation des dépendances             *"
 echo "********************************************************"
 apt-get update
-echo 50 > ${PROGRESS_FILE}
+echo 30 > ${PROGRESS_FILE}
 apt-get remove -y python-enum
-echo 60 > ${PROGRESS_FILE}
+echo 40 > ${PROGRESS_FILE}
 apt-get install -y  python-requests python-serial python-pyudev 
-echo 75 > ${PROGRESS_FILE}
+echo 60 > ${PROGRESS_FILE}
+apt-get install -y libav-tools
+echo 80 > ${PROGRESS_FILE}
 pip install enum-compat
 echo 100 > ${PROGRESS_FILE}
 echo "********************************************************"
